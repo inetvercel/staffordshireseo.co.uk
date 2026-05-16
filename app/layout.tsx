@@ -91,18 +91,19 @@ const localBusinessSchema = {
   description:
     "Staffordshire's leading SEO company, helping local businesses rank on page one of Google and grow online.",
   url: "https://www.staffordshireseo.co.uk",
-  telephone: "+441234567890",
   email: "hello@staffordshireseo.co.uk",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Stafford",
+    streetAddress: "4 Station Ct",
+    addressLocality: "Cannock",
+    postalCode: "WS11 0EJ",
     addressRegion: "Staffordshire",
     addressCountry: "GB",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 52.8057,
-    longitude: -2.1216,
+    latitude: 52.6916,
+    longitude: -2.0319,
   },
   areaServed: [
     { "@type": "Place", name: "Staffordshire" },

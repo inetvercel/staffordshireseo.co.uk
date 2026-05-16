@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Zap, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Zap, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const serviceLinks = [
   { label: "Web Design Staffordshire", href: "/services/web-design-staffordshire" },
@@ -44,21 +44,12 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-xs">
-              Staffordshire&apos;s leading web design and SEO agency. We help local businesses
-              rank higher on Google and grow their revenue online.
+              Staffordshire&apos;s SEO company. We get local businesses to page one of Google
+              and keep them there — fixed-price packages, no fuss.
             </p>
 
             {/* Contact Info */}
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="tel:+441234567890"
-                  className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-brand-gold transition-colors group"
-                >
-                  <Phone className="w-4 h-4 text-brand-gold flex-shrink-0" />
-                  <span>01234 567 890</span>
-                </a>
-              </li>
               <li>
                 <a
                   href="mailto:hello@staffordshireseo.co.uk"
@@ -71,7 +62,7 @@ export default function Footer() {
               <li>
                 <span className="flex items-center gap-2.5 text-sm text-slate-400">
                   <MapPin className="w-4 h-4 text-brand-gold flex-shrink-0" />
-                  <span>Stafford, Staffordshire, UK</span>
+                  <span>4 Station Ct, Cannock WS11 0EJ</span>
                 </span>
               </li>
             </ul>

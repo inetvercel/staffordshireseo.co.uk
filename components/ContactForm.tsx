@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -35,9 +35,8 @@ export default function ContactForm() {
               </h2>
               <div className="space-y-5">
                 {[
-                  { icon: Phone, label: "Phone", value: "01234 567 890", href: "tel:+441234567890" },
                   { icon: Mail, label: "Email", value: "hello@staffordshireseo.co.uk", href: "mailto:hello@staffordshireseo.co.uk" },
-                  { icon: MapPin, label: "Location", value: "Stafford, Staffordshire, UK", href: null },
+                  { icon: MapPin, label: "Address", value: "4 Station Ct, Cannock WS11 0EJ", href: null },
                   { icon: Clock, label: "Hours", value: "Mon–Fri: 9am – 5:30pm", href: null },
                 ].map(({ icon: Icon, label, value, href }) => (
                   <div key={label} className="flex items-start gap-4">

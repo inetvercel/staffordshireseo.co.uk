@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 export default function CTA() {
   return (
@@ -79,11 +79,11 @@ export default function CTA() {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            href="tel:+441234567890"
+            href="mailto:hello@staffordshireseo.co.uk"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-semibold text-base rounded-xl transition-all duration-200"
           >
-            <Phone className="w-4 h-4 text-brand-gold" />
-            01234 567 890
+            <Mail className="w-4 h-4 text-brand-gold" />
+            hello@staffordshireseo.co.uk
           </Link>
         </motion.div>
 
