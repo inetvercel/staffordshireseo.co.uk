@@ -4,19 +4,18 @@ import { Monitor, CheckCircle, ArrowRight, Star, Zap, Globe, Search, Smartphone 
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Website Design Staffordshire | Bespoke Web Design | StaffordshireSEO",
+  title: "Website Design Staffordshire | SEO-Ready Websites | StaffordshireSEO",
   description:
-    "Award-winning website design in Staffordshire. Bespoke, mobile-first websites built to rank on Google and convert visitors into customers. Serving businesses across Staffordshire. Get a free quote today.",
+    "Bespoke, SEO-optimised website design in Staffordshire from a dedicated SEO company. Mobile-first, lightning-fast websites built to rank on Google and convert visitors into customers. Free quote.",
   keywords: [
     "website design staffordshire",
     "web design staffordshire",
+    "SEO website design staffordshire",
     "staffordshire website design",
-    "staffordshire website company",
     "bespoke website design staffordshire",
     "website design company staffordshire",
-    "website designer staffordshire",
+    "SEO-ready website staffordshire",
     "website design agency staffordshire",
-    "manufacturing website design staffordshire",
     "website development staffordshire",
   ],
   alternates: {

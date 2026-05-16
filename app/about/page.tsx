@@ -4,9 +4,15 @@ import { CheckCircle, Users, Award, Heart, ArrowRight } from "lucide-react";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "About StaffordshireSEO | Local Web Design & SEO Agency",
+  title: "About StaffordshireSEO | Staffordshire SEO Company",
   description:
-    "StaffordshireSEO is a local web design and SEO agency based in Staffordshire. We help local businesses rank on Google and grow online. Meet the team behind the results.",
+    "Meet the team behind Staffordshire's leading SEO company. 10+ years of proven Google rankings for local businesses. No lock-in contracts, transparent reporting, real results.",
+  keywords: [
+    "about staffordshire SEO company",
+    "staffordshire SEO agency team",
+    "local SEO company staffordshire",
+    "SEO specialists staffordshire",
+  ],
   alternates: {
     canonical: "https://www.staffordshireseo.co.uk/about",
   },

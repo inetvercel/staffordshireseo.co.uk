@@ -4,9 +4,16 @@ import { Monitor, Search, ShoppingCart, Wrench, ArrowRight } from "lucide-react"
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Web Design & SEO Services Staffordshire | StaffordshireSEO",
+  title: "SEO Services Staffordshire | Staffordshire SEO Company | StaffordshireSEO",
   description:
-    "Explore our full range of web design and SEO services for Staffordshire businesses. From bespoke website design to local SEO, e-commerce and website maintenance.",
+    "Explore the full range of services from Staffordshire's leading SEO company. Local SEO, technical SEO, web design and e-commerce — everything your business needs to rank on Google.",
+  keywords: [
+    "SEO services staffordshire",
+    "staffordshire SEO company services",
+    "SEO agency staffordshire services",
+    "local SEO staffordshire",
+    "SEO packages staffordshire",
+  ],
   alternates: {
     canonical: "https://www.staffordshireseo.co.uk/services",
   },

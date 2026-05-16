@@ -5,9 +5,15 @@ import { locations } from "@/lib/locations";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "SEO & Web Design Across Staffordshire | All Locations | StaffordshireSEO",
+  title: "SEO Company Covering All of Staffordshire | Local Locations | StaffordshireSEO",
   description:
-    "StaffordshireSEO provides expert SEO and web design services across all of Staffordshire. Find your local area and discover how we can help your business rank on Google.",
+    "StaffordshireSEO is the SEO company serving every town across Staffordshire. Find your local area and discover how our SEO agency can get your business to page one of Google.",
+  keywords: [
+    "SEO company staffordshire locations",
+    "local SEO staffordshire towns",
+    "staffordshire SEO agency coverage",
+    "SEO near me staffordshire",
+  ],
   alternates: {
     canonical: "https://www.staffordshireseo.co.uk/locations",
   },

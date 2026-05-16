@@ -4,15 +4,16 @@ import { Wrench, CheckCircle, ArrowRight, Shield, RefreshCw, Bell, FileEdit } fr
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Website Maintenance Staffordshire | Monthly Care Plans | StaffordshireSEO",
+  title: "Website Maintenance Staffordshire | SEO Company Care Plans | StaffordshireSEO",
   description:
-    "Professional website maintenance plans for Staffordshire businesses. Security updates, backups, monitoring, and content changes from £99/month. Keep your website safe and fast.",
+    "Monthly website maintenance plans from Staffordshire's trusted SEO company. Security updates, backups, uptime monitoring and SEO health checks from £99/month. Keep your site safe and ranking.",
   keywords: [
     "website maintenance staffordshire",
-    "website support staffordshire",
+    "website maintenance SEO staffordshire",
     "website care plan staffordshire",
+    "SEO maintenance staffordshire",
+    "website support staffordshire",
     "wordpress maintenance staffordshire",
-    "website updates staffordshire",
   ],
   alternates: {
     canonical:

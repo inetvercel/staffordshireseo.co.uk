@@ -4,16 +4,19 @@ import { Search, CheckCircle, ArrowRight, TrendingUp, MapPin, BarChart2, FileTex
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "SEO Staffordshire | Local SEO Services | StaffordshireSEO",
+  title: "SEO Company Staffordshire | SEO Services & Agency | StaffordshireSEO",
   description:
-    "Expert SEO services in Staffordshire. We get local businesses to page one of Google with proven on-page SEO, local SEO, link building and content strategies. Free SEO audit available.",
+    "Staffordshire's trusted SEO company delivering proven page-one Google rankings. Local SEO, technical SEO, link building and content from an SEO agency that guarantees transparency. Free audit.",
   keywords: [
-    "SEO staffordshire",
-    "local SEO staffordshire",
     "SEO company staffordshire",
     "SEO agency staffordshire",
-    "google ranking staffordshire",
+    "staffordshire SEO company",
+    "staffordshire SEO agency",
+    "SEO staffordshire",
+    "local SEO staffordshire",
     "search engine optimisation staffordshire",
+    "google ranking staffordshire",
+    "SEO services staffordshire",
     "cannock SEO",
     "tamworth SEO",
     "lichfield SEO",

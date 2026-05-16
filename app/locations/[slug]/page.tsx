@@ -18,17 +18,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!location) return {};
 
   return {
-    title: `${location.name} SEO & Web Design | StaffordshireSEO`,
-    description: `Expert SEO and website design services in ${location.name}, Staffordshire. We help local ${location.name} businesses rank on page one of Google and grow online. Get a free SEO audit today.`,
+    title: `SEO Company ${location.name} | ${location.name} SEO Agency | StaffordshireSEO`,
+    description: `Looking for an SEO company in ${location.name}? StaffordshireSEO is the trusted local SEO agency getting ${location.name} businesses to page one of Google. Free SEO audit — no obligation.`,
     keywords: [
+      `SEO company ${location.name}`,
+      `${location.name} SEO company`,
+      `SEO agency ${location.name}`,
+      `${location.name} SEO agency`,
       `${location.name} SEO`,
       `SEO ${location.name}`,
-      `web design ${location.name}`,
-      `website design ${location.name}`,
-      `${location.name} website design`,
       `local SEO ${location.name}`,
-      `${location.name} digital marketing`,
-      `SEO company ${location.name}`,
+      `search engine optimisation ${location.name}`,
     ],
     alternates: {
       canonical: `https://www.staffordshireseo.co.uk/locations/${params.slug}`,

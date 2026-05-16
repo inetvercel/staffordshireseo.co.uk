@@ -4,15 +4,16 @@ import { ShoppingCart, CheckCircle, ArrowRight } from "lucide-react";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "E-commerce Website Design Staffordshire | Online Shops | StaffordshireSEO",
+  title: "E-commerce SEO & Website Design Staffordshire | StaffordshireSEO",
   description:
-    "Expert e-commerce website design in Staffordshire. We build Shopify and WooCommerce stores that rank on Google and convert visitors into customers. Free consultation available.",
+    "E-commerce websites built by Staffordshire's leading SEO company. Shopify and WooCommerce stores designed to rank on Google and convert visitors into customers. Free consultation.",
   keywords: [
+    "ecommerce SEO staffordshire",
     "ecommerce website staffordshire",
-    "online shop staffordshire",
-    "shopify staffordshire",
+    "online shop SEO staffordshire",
+    "shopify SEO staffordshire",
     "woocommerce staffordshire",
-    "ecommerce web design staffordshire",
+    "ecommerce SEO company staffordshire",
     "online store staffordshire",
   ],
   alternates: {
