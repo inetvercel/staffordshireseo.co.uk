@@ -9,20 +9,20 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Website Design & SEO Staffordshire | StaffordshireSEO",
+  title: "SEO Company Staffordshire | Staffordshire SEO Agency | StaffordshireSEO",
   description:
-    "Staffordshire's leading website design and SEO agency. We build stunning websites and get local businesses to page one of Google. Serving Cannock, Tamworth, Lichfield, Stafford and all of Staffordshire. Get your free SEO audit today.",
+    "StaffordshireSEO is Staffordshire's leading SEO company. We get local businesses to page one of Google with proven SEO strategies. Serving Cannock, Tamworth, Lichfield, Stafford and all of Staffordshire. Free SEO audit.",
   keywords: [
-    "website design staffordshire",
-    "web design staffordshire",
-    "staffordshire website design",
-    "staffordshire website company",
+    "SEO company staffordshire",
+    "staffordshire SEO company",
+    "SEO agency staffordshire",
+    "staffordshire SEO agency",
     "SEO staffordshire",
-    "local seo staffordshire",
-    "website design company staffordshire",
-    "bespoke website design staffordshire",
-    "manufacturing website design staffordshire",
-    "ecommerce website staffordshire",
+    "staffordshire SEO",
+    "local SEO staffordshire",
+    "SEO services staffordshire",
+    "search engine optimisation staffordshire",
+    "google ranking staffordshire",
   ],
   alternates: {
     canonical: "https://www.staffordshireseo.co.uk",

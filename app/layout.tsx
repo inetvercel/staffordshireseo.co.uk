@@ -20,22 +20,22 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.staffordshireseo.co.uk"),
   title: {
     default:
-      "Website Design & SEO Staffordshire | StaffordshireSEO",
+      "SEO Company Staffordshire | Staffordshire SEO Agency | StaffordshireSEO",
     template: "%s | StaffordshireSEO",
   },
   description:
-    "Staffordshire's leading web design and SEO agency. We build stunning, fast websites and dominate local search for businesses across Staffordshire. Get your free SEO audit today.",
+    "Staffordshire's leading SEO company. We get local businesses to page one of Google with proven SEO strategies. Trusted Staffordshire SEO agency serving Cannock, Tamworth, Lichfield, Stafford and beyond. Free SEO audit.",
   keywords: [
-    "website design staffordshire",
-    "web design staffordshire",
-    "staffordshire website design",
-    "staffordshire website company",
+    "SEO company staffordshire",
+    "staffordshire SEO company",
+    "SEO agency staffordshire",
+    "staffordshire SEO agency",
     "SEO staffordshire",
-    "local seo staffordshire",
-    "website design company staffordshire",
-    "ecommerce website staffordshire",
-    "bespoke website design staffordshire",
-    "website maintenance staffordshire",
+    "staffordshire SEO",
+    "local SEO staffordshire",
+    "SEO services staffordshire",
+    "search engine optimisation staffordshire",
+    "google ranking staffordshire",
   ],
   authors: [{ name: "StaffordshireSEO" }],
   creator: "StaffordshireSEO",
@@ -45,23 +45,23 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://www.staffordshireseo.co.uk",
     siteName: "StaffordshireSEO",
-    title: "Website Design & SEO Staffordshire | StaffordshireSEO",
+    title: "SEO Company Staffordshire | Staffordshire SEO Agency | StaffordshireSEO",
     description:
-      "Staffordshire's leading web design and SEO agency. Stunning websites, proven results.",
+      "Staffordshire's leading SEO company. Proven rankings, transparent reporting, no contracts.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "StaffordshireSEO - Website Design & SEO Staffordshire",
+        alt: "StaffordshireSEO - SEO Company Staffordshire",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Design & SEO Staffordshire | StaffordshireSEO",
+    title: "SEO Company Staffordshire | Staffordshire SEO Agency | StaffordshireSEO",
     description:
-      "Staffordshire's leading web design and SEO agency. Stunning websites, proven results.",
+      "Staffordshire's leading SEO company. Proven rankings, transparent reporting, no contracts.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -89,7 +89,7 @@ const localBusinessSchema = {
   "@id": "https://www.staffordshireseo.co.uk",
   name: "StaffordshireSEO",
   description:
-    "Staffordshire's leading web design and SEO agency, helping local businesses rank higher and grow online.",
+    "Staffordshire's leading SEO company, helping local businesses rank on page one of Google and grow online.",
   url: "https://www.staffordshireseo.co.uk",
   telephone: "+441234567890",
   email: "hello@staffordshireseo.co.uk",
@@ -113,11 +113,11 @@ const localBusinessSchema = {
     { "@type": "Place", name: "Burton upon Trent" },
   ],
   serviceType: [
-    "Web Design",
     "SEO",
-    "E-commerce Development",
-    "Website Maintenance",
     "Local SEO",
+    "Search Engine Optimisation",
+    "Web Design",
+    "E-commerce Development",
   ],
   priceRange: "££",
   openingHoursSpecification: [

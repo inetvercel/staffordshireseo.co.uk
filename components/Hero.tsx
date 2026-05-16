@@ -60,7 +60,7 @@ export default function Hero() {
           >
             <Search className="w-3.5 h-3.5 text-brand-gold" />
             <span className="text-sm font-medium text-brand-gold">
-              Staffordshire&apos;s #1 SEO &amp; Web Design Agency
+              Staffordshire&apos;s #1 SEO Company
             </span>
           </motion.div>
 
@@ -71,11 +71,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6"
           >
-            Website Design &amp;{" "}
-            <span className="gradient-text">SEO</span>{" "}
+            SEO Company{" "}
             <br className="hidden sm:block" />
-            in{" "}
-            <span className="relative">
+            <span className="gradient-text relative inline-block">
               Staffordshire
               <svg
                 className="absolute -bottom-2 left-0 w-full"
@@ -101,8 +99,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl mb-10"
           >
-            We build stunning, lightning-fast websites and get Staffordshire businesses
-            to page one of Google. More visibility, more enquiries, more revenue.
+            We are Staffordshire&apos;s trusted SEO company — getting local businesses
+            to page one of Google with proven strategies. More rankings, more enquiries,
+            more revenue.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -120,10 +119,10 @@ export default function Hero() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="/services/web-design-staffordshire"
+              href="/services/seo-staffordshire"
               className="inline-flex items-center gap-2 px-7 py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-semibold text-base rounded-xl transition-all duration-200"
             >
-              View Our Work
+              Our SEO Services
             </Link>
           </motion.div>
 
