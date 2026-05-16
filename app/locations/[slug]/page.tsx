@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { MapPin, CheckCircle, ArrowRight, Search, Monitor, ShoppingCart } from "lucide-react";
+import { MapPin, CheckCircle, ArrowRight, Search, Lightbulb, Building2 } from "lucide-react";
 import { locations, getLocationBySlug } from "@/lib/locations";
 import CTA from "@/components/CTA";
 
@@ -43,48 +43,15 @@ export default function LocationPage({ params }: PageProps) {
   const locationSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `SEO & Web Design ${location.name}`,
-    description: `Expert SEO and website design services for businesses in ${location.name}, Staffordshire.`,
+    name: `SEO Company ${location.name}`,
+    description: location.heroSubtext,
     provider: {
       "@type": "LocalBusiness",
       name: "StaffordshireSEO",
       url: "https://www.staffordshireseo.co.uk",
     },
-    areaServed: {
-      "@type": "Place",
-      name: `${location.name}, Staffordshire`,
-    },
+    areaServed: { "@type": "Place", name: `${location.name}, Staffordshire` },
   };
-
-  const services = [
-    {
-      icon: Search,
-      title: `SEO ${location.name}`,
-      description: `Get your ${location.name} business to the top of Google. We deliver proven local SEO results that drive real enquiries.`,
-      href: `/services/seo-staffordshire`,
-      color: "text-amber-400",
-      bg: "bg-amber-500/10",
-      border: "border-amber-500/20",
-    },
-    {
-      icon: Monitor,
-      title: `Web Design ${location.name}`,
-      description: `Bespoke, conversion-focused websites for ${location.name} businesses. Mobile-first, fast, and built to rank.`,
-      href: `/services/web-design-staffordshire`,
-      color: "text-blue-400",
-      bg: "bg-blue-500/10",
-      border: "border-blue-500/20",
-    },
-    {
-      icon: ShoppingCart,
-      title: `E-commerce ${location.name}`,
-      description: `Powerful online stores for ${location.name} retailers. We build Shopify and WooCommerce stores that sell.`,
-      href: `/services/ecommerce-staffordshire`,
-      color: "text-emerald-400",
-      bg: "bg-emerald-500/10",
-      border: "border-emerald-500/20",
-    },
-  ];
 
   return (
     <>
@@ -93,7 +60,7 @@ export default function LocationPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }}
       />
 
-      {/* Hero */}
+      {/* Hero — unique headline + subtext per location */}
       <section className="relative pt-32 pb-20 px-4 md:px-6 lg:px-8 bg-brand-navy overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
@@ -112,33 +79,32 @@ export default function LocationPage({ params }: PageProps) {
               ← All Locations
             </Link>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-brand-gold" />
+              <div className="w-10 h-10 rounded-xl bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-brand-gold" />
               </div>
               <span className="text-brand-gold font-semibold text-sm uppercase tracking-wider">
                 {location.name}, Staffordshire
+                {location.population && (
+                  <span className="text-slate-600 font-normal normal-case tracking-normal ml-2">
+                    · Pop. {location.population}
+                  </span>
+                )}
               </span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-              SEO &amp; Web Design in{" "}
-              <span className="gradient-text">{location.name}</span>
+              <span className="gradient-text">{location.heroHeadline.split("—")[0].trim()}</span>
+              {location.heroHeadline.includes("—") && (
+                <>
+                  {" "}—{" "}
+                  <span className="text-white">{location.heroHeadline.split("—")[1].trim()}</span>
+                </>
+              )}
             </h1>
 
-            <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              We help {location.name} businesses rank higher on Google, attract more
-              local customers, and grow their revenue online. Expert SEO and bespoke
-              website design — all from a local Staffordshire team.
+            <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+              {location.heroSubtext}
             </p>
-
-            {location.description && (
-              <p className="text-slate-500 text-base leading-relaxed mb-8">
-                {location.description}
-                {location.population && (
-                  <> With a population of around {location.population}, {location.name} has a thriving local business community we know well.</>
-                )}
-              </p>
-            )}
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -148,132 +114,168 @@ export default function LocationPage({ params }: PageProps) {
                 Free {location.name} SEO Audit <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="#services"
+                href="#market"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-xl transition-all"
               >
-                Our Services
+                Why {location.name}?
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services for this location */}
-      <section
-        id="services"
-        className="py-20 px-4 md:px-6 lg:px-8 bg-brand-navy-light"
-      >
+      {/* Stats — unique per location */}
+      <section className="py-12 px-4 md:px-6 lg:px-8 bg-brand-navy border-y border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-              Our{" "}
-              <span className="gradient-text">{location.name} Services</span>
-            </h2>
-            <p className="text-slate-400 max-w-xl mx-auto">
-              Tailored digital marketing and web design services specifically for{" "}
-              {location.name} businesses.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {services.map(({ icon: Icon, title, description, href, color, bg, border }) => (
-              <Link
-                key={title}
-                href={href}
-                className={`group flex flex-col p-7 bg-brand-card border ${border} hover:border-opacity-60 rounded-2xl card-hover`}
-              >
-                <div
-                  className={`w-11 h-11 rounded-xl ${bg} border ${border} flex items-center justify-center mb-5`}
-                >
-                  <Icon className={`w-5 h-5 ${color}`} />
-                </div>
-                <h3 className={`font-display font-bold text-lg text-white mb-2.5 group-hover:${color} transition-colors`}>
-                  {title}
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed flex-1 mb-4">
-                  {description}
-                </p>
-                <div className={`flex items-center gap-1.5 text-sm font-medium text-slate-500 group-hover:${color} transition-colors`}>
-                  Learn more <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-              </Link>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+            {location.stats.map(({ value, label }) => (
+              <div key={label} className="text-center p-5 bg-brand-card rounded-2xl border border-white/5">
+                <span className="font-display font-bold text-2xl text-brand-gold block mb-1">
+                  {value}
+                </span>
+                <span className="text-slate-400 text-xs">{label}</span>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us for this location */}
-      <section className="py-20 px-4 md:px-6 lg:px-8 bg-brand-navy">
+      {/* Market context — unique paragraph + industry tags per location */}
+      <section id="market" className="py-20 px-4 md:px-6 lg:px-8 bg-brand-navy-light">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                Why {location.name} Businesses{" "}
-                <span className="gradient-text">Choose Us</span>
-              </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
-                As a Staffordshire-based agency, we understand the local {location.name}{" "}
-                market better than any out-of-town competitor. We know your customers,
-                your local competitors, and exactly what it takes to rank in{" "}
-                {location.name} search results.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  `Deep knowledge of the ${location.name} local market`,
-                  "Proven track record of page-one Google rankings",
-                  "Transparent monthly reporting with no jargon",
-                  "No long-term contracts — earn our business monthly",
-                  "Dedicated account manager who knows your business",
-                  "Results-focused strategies, not vanity metrics",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-300 text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Nearby areas */}
-            {location.nearbyTowns && location.nearbyTowns.length > 0 && (
-              <div className="p-8 bg-brand-card border border-white/5 rounded-2xl">
-                <h3 className="font-display font-semibold text-white text-lg mb-5">
-                  We Also Cover Nearby Areas
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {location.nearbyTowns.map((town) => {
-                    const nearbyLoc = locations.find(
-                      (l) => l.name.toLowerCase() === town.toLowerCase()
-                    );
-                    return nearbyLoc ? (
-                      <Link
-                        key={town}
-                        href={`/locations/${nearbyLoc.slug}`}
-                        className="flex items-center gap-1.5 px-3 py-1.5 bg-brand-navy border border-white/10 hover:border-brand-gold/30 text-slate-400 hover:text-brand-gold text-sm rounded-full transition-all"
-                      >
-                        <MapPin className="w-3.5 h-3.5" />
-                        {town}
-                      </Link>
-                    ) : (
-                      <span
-                        key={town}
-                        className="flex items-center gap-1.5 px-3 py-1.5 bg-brand-navy border border-white/10 text-slate-500 text-sm rounded-full"
-                      >
-                        <MapPin className="w-3.5 h-3.5" />
-                        {town}
-                      </span>
-                    );
-                  })}
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-9 h-9 rounded-xl bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center">
+                  <Building2 className="w-4 h-4 text-brand-gold" />
                 </div>
-                <div className="mt-6 pt-6 border-t border-white/5">
-                  <Link
-                    href="/locations"
-                    className="text-sm text-brand-gold hover:text-brand-gold-light transition-colors inline-flex items-center gap-1.5"
-                  >
-                    View all Staffordshire locations <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                <span className="text-brand-gold text-sm font-semibold uppercase tracking-wider">
+                  The {location.name} Market
+                </span>
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-5">
+                What Makes{" "}
+                <span className="gradient-text">{location.name}</span>{" "}
+                Different
+              </h2>
+              <p className="text-slate-400 leading-relaxed text-base mb-8">
+                {location.marketContext}
+              </p>
+              <div>
+                <p className="text-xs text-slate-600 uppercase tracking-widest mb-3">
+                  Key local industries
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {location.industries.map((industry) => (
+                    <span
+                      key={industry}
+                      className="px-3 py-1.5 bg-brand-navy border border-brand-gold/15 text-slate-300 text-xs rounded-full font-medium"
+                    >
+                      {industry}
+                    </span>
+                  ))}
                 </div>
               </div>
-            )}
+            </div>
+
+            {/* SEO insight callout — unique per location */}
+            <div className="flex flex-col gap-5">
+              <div className="p-7 bg-brand-card border border-brand-gold/20 rounded-2xl">
+                <div className="flex items-start gap-4">
+                  <div className="w-9 h-9 rounded-xl bg-brand-gold/10 border border-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Lightbulb className="w-4 h-4 text-brand-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-white text-base mb-3">
+                      The {location.name} SEO Opportunity
+                    </h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">
+                      {location.seoInsight}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Nearby areas */}
+              {location.nearbyTowns && location.nearbyTowns.length > 0 && (
+                <div className="p-6 bg-brand-card border border-white/5 rounded-2xl">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Search className="w-4 h-4 text-slate-500" />
+                    <h3 className="text-sm font-semibold text-slate-400">
+                      We also cover nearby areas
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {location.nearbyTowns.map((town) => {
+                      const nearbyLoc = locations.find(
+                        (l) => l.name.toLowerCase() === town.toLowerCase()
+                      );
+                      return nearbyLoc ? (
+                        <Link
+                          key={town}
+                          href={`/locations/${nearbyLoc.slug}`}
+                          className="flex items-center gap-1.5 px-3 py-1.5 bg-brand-navy border border-white/10 hover:border-brand-gold/30 text-slate-400 hover:text-brand-gold text-xs rounded-full transition-all"
+                        >
+                          <MapPin className="w-3 h-3" />
+                          {town}
+                        </Link>
+                      ) : (
+                        <span
+                          key={town}
+                          className="flex items-center gap-1.5 px-3 py-1.5 bg-brand-navy border border-white/10 text-slate-600 text-xs rounded-full"
+                        >
+                          <MapPin className="w-3 h-3" />
+                          {town}
+                        </span>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-white/5">
+                    <Link
+                      href="/locations"
+                      className="text-xs text-brand-gold hover:text-brand-gold-light transition-colors inline-flex items-center gap-1"
+                    >
+                      View all Staffordshire locations <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why us — unique reasons per location */}
+      <section className="py-20 px-4 md:px-6 lg:px-8 bg-brand-navy">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+              Why {location.name} Businesses{" "}
+              <span className="gradient-text">Choose StaffordshireSEO</span>
+            </h2>
+            <p className="text-slate-400">
+              We don&apos;t apply a generic template to every town. Here&apos;s
+              specifically why our approach works for {location.name}.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-4xl mx-auto mb-12">
+            {location.uniqueReasons.map((reason) => (
+              <div
+                key={reason}
+                className="flex items-start gap-4 p-6 bg-brand-card border border-white/5 rounded-2xl"
+              >
+                <CheckCircle className="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" />
+                <p className="text-slate-300 text-sm leading-relaxed">{reason}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold hover:bg-brand-gold-light text-brand-navy font-bold rounded-xl transition-all duration-200 shadow-gold hover:scale-105"
+            >
+              Get Your Free {location.name} SEO Audit <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
