@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Zap, TrendingUp, BarChart2, Bot } from "lucide-react";
+import { CheckCircle, ArrowRight, Zap, TrendingUp, BarChart2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "SEO Packages Staffordshire | Fixed-Price Monthly Retainers | StaffordshireSEO",
@@ -21,20 +21,20 @@ export const metadata: Metadata = {
 const packages = [
   {
     icon: Zap,
-    name: "Local SEO",
-    price: "£399",
-    tagline: "Own your local search results",
+    name: "Local SEO Starter",
+    price: "From £495",
+    tagline: "Get found locally. Stop losing customers to competitors who rank above you.",
     description:
-      "The foundation package. Built for established local businesses that want to rank consistently for their core local keywords and generate a steady flow of inbound enquiries.",
+      "The foundation every local business needs. We get your Google Business Profile working properly, build local citations, and optimise your core pages so local buyers find you — not your competitors.",
     deliverables: [
       "Google Business Profile optimisation",
-      "On-page SEO for up to 10 pages",
       "Local citation building & cleanup",
-      "Monthly keyword rank tracking",
-      "1 location or service landing page",
-      "Monthly performance report",
+      "On-page SEO across core pages",
+      "Foundational keyword targeting",
+      "Monthly rank tracking report",
+      "Local visibility improvements",
     ],
-    bestFor: ["Trades & Contractors", "Independent Retailers", "Local Service Businesses"],
+    bestFor: ["Small Local Businesses", "Trades & Contractors", "Independent Retailers", "Local Service Businesses"],
     color: "text-amber-400",
     bg: "bg-amber-500/10",
     border: "border-amber-500/20",
@@ -42,20 +42,20 @@ const packages = [
   },
   {
     icon: TrendingUp,
-    name: "SEO + Content",
-    price: "£599",
-    tagline: "Rankings backed by real content authority",
+    name: "Growth SEO",
+    price: "From £995",
+    tagline: "Build rankings that compound month on month.",
     description:
-      "Combines solid technical and local SEO with a monthly content output that builds topical authority — the sustainable way to compound rankings over time.",
+      "Goes well beyond foundational SEO. Content production, authority building, technical health, and local landing pages — everything needed to grow organic traffic and leads consistently over time.",
     deliverables: [
-      "Everything in Local SEO",
-      "4 SEO-optimised blog posts per month",
-      "Content calendar & topic planning",
-      "Internal linking strategy",
-      "Service or location page build-out",
-      "Competitor content gap analysis",
+      "Everything in Local SEO Starter",
+      "SEO content production",
+      "Authority building",
+      "Technical SEO audit & ongoing fixes",
+      "Local landing page creation",
+      "Ongoing monthly optimisation",
     ],
-    bestFor: ["Accountants & Solicitors", "Dental & Healthcare", "Professional Services"],
+    bestFor: ["Dental & Healthcare", "Accountants & Solicitors", "Professional Services", "Established Local Businesses"],
     color: "text-brand-gold",
     bg: "bg-brand-gold/10",
     border: "border-brand-gold/30",
@@ -63,44 +63,23 @@ const packages = [
   },
   {
     icon: BarChart2,
-    name: "Authority Growth",
-    price: "£799",
-    tagline: "Compete at the top of your market",
+    name: "Authority SEO",
+    price: "From £1,995",
+    tagline: "Dominate competitive industries. Rank where others can't.",
     description:
-      "For businesses in competitive local markets that need more than optimisation — they need authority. Link acquisition, competitor intelligence, and content that earns rankings.",
+      "For businesses in competitive sectors that need more than optimisation — they need a genuine authority campaign. Aggressive link building, content scaling, and sustained authority growth to own your market.",
     deliverables: [
-      "Everything in SEO + Content",
-      "Link building (DA 30+ relevant sites)",
-      "Competitor authority & backlink analysis",
-      "6 SEO-optimised blog posts per month",
-      "Full technical SEO audit & fixes",
-      "Quarterly strategy review call",
+      "Everything in Growth SEO",
+      "Aggressive link building & backlink campaigns",
+      "Content scaling programme",
+      "Full authority campaign management",
+      "Competitor authority gap analysis",
+      "Quarterly strategy review",
     ],
-    bestFor: ["Clinics & Medical Practices", "Commercial Services", "Multi-location Businesses"],
+    bestFor: ["Competitive Industries", "Multi-location Businesses", "Businesses Targeting Aggressive Growth"],
     color: "text-blue-400",
     bg: "bg-blue-500/10",
     border: "border-blue-500/20",
-    featured: false,
-  },
-  {
-    icon: Bot,
-    name: "AI SEO",
-    price: "£1,199",
-    tagline: "Scale your SEO with AI-assisted output",
-    description:
-      "High-output SEO at scale. AI-assisted content workflows, topical authority map build-out, and location page generation — giving enterprise-level SEO reach at a fraction of the cost.",
-    deliverables: [
-      "Everything in Authority Growth",
-      "AI-assisted content at scale (10+ pieces/month)",
-      "Full topical authority map build-out",
-      "Location page generation & deployment",
-      "Automated rank tracking & reporting dashboard",
-      "Monthly async strategy session",
-    ],
-    bestFor: ["Multi-location Businesses", "Competitive Sectors", "Businesses Scaling Fast"],
-    color: "text-purple-400",
-    bg: "bg-purple-500/10",
-    border: "border-purple-500/20",
     featured: false,
   },
 ];
@@ -232,7 +211,7 @@ export default function PackagesPage() {
               Start with one month — stay because of results.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {packages.map(({ icon: Icon, name, price, tagline, description, deliverables, bestFor, color, bg, border, featured }) => (
               <div
                 key={name}

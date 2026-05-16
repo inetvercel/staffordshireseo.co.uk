@@ -1,58 +1,46 @@
 "use client";
 
 import Link from "next/link";
-import { Zap, TrendingUp, BarChart2, Bot, ArrowRight } from "lucide-react";
+import { Zap, TrendingUp, BarChart2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const packages = [
   {
     icon: Zap,
-    name: "Local SEO",
-    price: "£399/mo",
+    name: "Local SEO Starter",
+    price: "From £495/mo",
     description:
-      "Foundation local SEO for businesses that want to own their town's search results. Google Business, on-page, citations, and monthly reporting.",
+      "The foundation every local business needs. Google Business Profile, citations, and on-page optimisation so local buyers find you — not your competitors.",
     href: "/packages",
     color: "from-amber-500/20 to-amber-600/5",
     border: "border-amber-500/20 hover:border-amber-500/40",
     iconColor: "text-amber-400",
-    tags: ["Local SEO", "Google Business", "Citations"],
+    tags: ["Google Business", "Local Visibility", "Foundational SEO"],
   },
   {
     icon: TrendingUp,
-    name: "SEO + Content",
-    price: "£599/mo",
+    name: "Growth SEO",
+    price: "From £995/mo",
     description:
-      "Local SEO plus a monthly content output that builds topical authority. The compound approach to ranking — content that gets better over time.",
+      "Content, authority building, technical SEO, and local landing pages — everything needed to grow organic traffic and leads consistently month on month.",
     href: "/packages",
     color: "from-brand-gold/20 to-brand-gold/5",
     border: "border-brand-gold/30 hover:border-brand-gold/50",
     iconColor: "text-brand-gold",
-    tags: ["SEO", "4 Posts/Month", "Content Strategy"],
+    tags: ["Content", "Authority Building", "Local Pages"],
     featured: true,
   },
   {
     icon: BarChart2,
-    name: "Authority Growth",
-    price: "£799/mo",
+    name: "Authority SEO",
+    price: "From £1,995/mo",
     description:
-      "For competitive local markets. Adds link building, competitor intelligence, and technical SEO to the content foundation — built to win.",
+      "For competitive industries that need aggressive growth. Backlinks, content scaling, and full authority campaigns to dominate your market.",
     href: "/packages",
     color: "from-blue-500/20 to-blue-600/5",
     border: "border-blue-500/20 hover:border-blue-500/40",
     iconColor: "text-blue-400",
-    tags: ["Link Building", "Technical SEO", "Competitor Intel"],
-  },
-  {
-    icon: Bot,
-    name: "AI SEO",
-    price: "£1,199/mo",
-    description:
-      "High-output SEO at scale. AI-assisted content workflows, topical map build-out, and location page generation for maximum organic reach.",
-    href: "/packages",
-    color: "from-purple-500/20 to-purple-600/5",
-    border: "border-purple-500/20 hover:border-purple-500/40",
-    iconColor: "text-purple-400",
-    tags: ["AI Content", "Topical Maps", "Scale"],
+    tags: ["Backlinks", "Content Scaling", "Authority Campaigns"],
   },
 ];
 
@@ -110,7 +98,7 @@ export default function Services() {
         </div>
 
         {/* Packages grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {packages.map((pkg, index) => (
             <motion.div
               key={pkg.name}

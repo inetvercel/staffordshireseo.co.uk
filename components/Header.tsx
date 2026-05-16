@@ -10,10 +10,9 @@ const navLinks = [
     label: "Packages",
     href: "/packages",
     children: [
-      { label: "Local SEO — £399/mo", href: "/packages#packages" },
-      { label: "SEO + Content — £599/mo", href: "/packages#packages" },
-      { label: "Authority Growth — £799/mo", href: "/packages#packages" },
-      { label: "AI SEO — £1,199/mo", href: "/packages#packages" },
+      { label: "Local SEO Starter — from £495/mo", href: "/packages#packages" },
+      { label: "Growth SEO — from £995/mo", href: "/packages#packages" },
+      { label: "Authority SEO — from £1,995/mo", href: "/packages#packages" },
     ],
   },
   {
