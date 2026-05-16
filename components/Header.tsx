@@ -7,11 +7,21 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   {
+    label: "Packages",
+    href: "/packages",
+    children: [
+      { label: "Local SEO — £399/mo", href: "/packages#packages" },
+      { label: "SEO + Content — £599/mo", href: "/packages#packages" },
+      { label: "Authority Growth — £799/mo", href: "/packages#packages" },
+      { label: "AI SEO — £1,199/mo", href: "/packages#packages" },
+    ],
+  },
+  {
     label: "Services",
     href: "/services",
     children: [
-      { label: "Web Design Staffordshire", href: "/services/web-design-staffordshire" },
       { label: "SEO Staffordshire", href: "/services/seo-staffordshire" },
+      { label: "Web Design Staffordshire", href: "/services/web-design-staffordshire" },
       { label: "E-commerce Staffordshire", href: "/services/ecommerce-staffordshire" },
       { label: "Website Maintenance", href: "/services/website-maintenance-staffordshire" },
     ],
