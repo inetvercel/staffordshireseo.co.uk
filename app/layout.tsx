@@ -19,35 +19,37 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.staffordshireseo.co.uk"),
   title: {
-    default:
-      "SEO Company Staffordshire | Staffordshire SEO Agency | StaffordshireSEO",
+    default: "StaffordshireSEO | SEO Company & Agency Staffordshire",
     template: "%s | StaffordshireSEO",
   },
   description:
-    "Staffordshire's leading SEO company. We get local businesses to page one of Google with proven SEO strategies. Trusted Staffordshire SEO agency serving Cannock, Tamworth, Lichfield, Stafford and beyond. Free SEO audit.",
+    "Staffordshire's leading SEO company, helping local businesses rank on page one of Google and grow online. Professional SEO services across Staffordshire.",
   keywords: [
-    "SEO company staffordshire",
-    "staffordshire SEO company",
-    "SEO agency staffordshire",
-    "staffordshire SEO agency",
-    "SEO staffordshire",
-    "staffordshire SEO",
-    "local SEO staffordshire",
-    "SEO services staffordshire",
-    "search engine optimisation staffordshire",
-    "google ranking staffordshire",
+    "SEO company Staffordshire",
+    "SEO agency Staffordshire",
+    "Staffordshire SEO",
+    "local SEO Staffordshire",
+    "SEO services Staffordshire",
+    "Google ranking Staffordshire",
+    "SEO expert Staffordshire",
+    "search engine optimisation Staffordshire",
   ],
   authors: [{ name: "StaffordshireSEO" }],
   creator: "StaffordshireSEO",
-  publisher: "StaffordshireSEO",
+  alternates: {
+    canonical: "/",
+  },
+  verification: {
+    google: "Z8pnBJ5tp6O_8-wJ2yJXNo2x_wvuIg_lP7uXPPuCR7s",
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://www.staffordshireseo.co.uk",
     siteName: "StaffordshireSEO",
-    title: "SEO Company Staffordshire | Staffordshire SEO Agency | StaffordshireSEO",
+    title: "StaffordshireSEO | SEO Company & Agency Staffordshire",
     description:
-      "Staffordshire's leading SEO company. Proven rankings, transparent reporting, no contracts.",
+      "Staffordshire's leading SEO company. We help local businesses rank on page one of Google and grow their revenue online.",
     images: [
       {
         url: "/og-image.jpg",
@@ -59,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Company Staffordshire | Staffordshire SEO Agency | StaffordshireSEO",
+    title: "StaffordshireSEO | SEO Company & Agency Staffordshire",
     description:
-      "Staffordshire's leading SEO company. Proven rankings, transparent reporting, no contracts.",
+      "Staffordshire's leading SEO company. We help local businesses rank on page one of Google.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -74,12 +76,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "your-google-verification-code",
-  },
-  alternates: {
-    canonical: "https://www.staffordshireseo.co.uk",
   },
 };
 

@@ -77,9 +77,9 @@ export default function LocationsPage() {
                   <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-brand-gold group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
 
-                {location.description && (
+                {location.marketContext && (
                   <p className="text-slate-500 text-xs leading-relaxed mb-4 line-clamp-2">
-                    {location.description}
+                    {location.marketContext}
                   </p>
                 )}
 
