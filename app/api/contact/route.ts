@@ -10,9 +10,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
+    const fromAddress = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
+    const toAddress = process.env.RESEND_TO_EMAIL ?? "hello@staffordshireseo.co.uk";
+
     await resend.emails.send({
-      from: "StaffordshireSEO Contact Form <onboarding@resend.dev>",
-      to: "hello@staffordshireseo.co.uk",
+      from: `StaffordshireSEO Contact Form <${fromAddress}>`,
+      to: toAddress,
       replyTo: email,
       subject: `New Enquiry from ${name} – StaffordshireSEO`,
       html: `
