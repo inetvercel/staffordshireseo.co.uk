@@ -6,6 +6,7 @@ import { Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -18,9 +19,20 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setSubmitted(true);
-    setLoading(false);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please email us directly at hello@staffordshireseo.co.uk");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -166,6 +178,12 @@ export default function ContactForm() {
                     placeholder="Tell us about your business, your goals, and what you're looking to achieve..."
                   />
                 </div>
+
+                {error && (
+                  <p className="text-sm text-red-400 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3">
+                    {error}
+                  </p>
+                )}
 
                 <button
                   type="submit"
